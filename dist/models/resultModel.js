@@ -10,5 +10,5 @@ const ResultSchema = new Schema({
     x: { type: Number, required: true, min: 0, max: 2000 },
     y: { type: Number, required: true, min: 0, max: 1413 },
 });
-exports.default = mongoose_1.default.model("Score", ResultSchema);
+exports.default = mongoose_1.default.model("Result", ResultSchema);
 //# sourceMappingURL=resultModel.js.map

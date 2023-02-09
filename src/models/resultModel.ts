@@ -10,4 +10,4 @@ const ResultSchema = new Schema({
 });
 
 
-export default mongoose.model<IResult>("Score", ResultSchema);
+export default mongoose.model<IResult>("Result", ResultSchema);
