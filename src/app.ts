@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== "production") {
 require("./mongoConfig");
 
 const resultsRouter = require('./routes/results');
+const scoresRouter = require('./routes/scores');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/results', resultsRouter);
+app.use('/scores', scoresRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req: Request, res: Response, next: NextFunction) {

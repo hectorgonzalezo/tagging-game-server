@@ -14,6 +14,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 require("./mongoConfig");
 const resultsRouter = require('./routes/results');
+const scoresRouter = require('./routes/scores');
 const app = (0, express_1.default)();
 // Add cors
 app.use(cors());
@@ -23,6 +24,7 @@ app.use(express_1.default.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express_1.default.static(path.join(__dirname, 'public')));
 app.use('/results', resultsRouter);
+app.use('/scores', scoresRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     next((0, http_errors_1.default)(404));

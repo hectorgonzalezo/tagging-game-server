@@ -1,4 +1,3 @@
-import { Request, Response, NextFunction } from "express";
 import { resultLookup } from '../controllers/resultController';
 const express = require("express");
 const router = express.Router();

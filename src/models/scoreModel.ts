@@ -16,7 +16,7 @@ const ScoreSchema = new Schema({
         `${props.value} is in the wrong score format, it should be: 0:00:00`,
     },
   },
-});
+}, { timestamps: true });
 
 
 export default mongoose.model<IScore>("Score", ScoreSchema);
