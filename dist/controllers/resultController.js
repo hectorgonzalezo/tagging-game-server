@@ -18,7 +18,15 @@ const resultLookup = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
     try {
         let { character, x, y } = req.query;
         if (character === undefined || x === undefined || y === undefined) {
-            return res.status(400).send({ error: `Query is missing an element. character: ${character}, x: ${x}, y: ${y}` });
+            return res
+                .status(400)
+                .send({
+                errors: [
+                    {
+                        msg: `Query is missing an element. character: ${character}, x: ${x}, y: ${y}`,
+                    },
+                ],
+            });
         }
         const xNum = Number(x);
         const yNum = Number(y);

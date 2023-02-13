@@ -28,7 +28,7 @@ describe("GET all results", () => {
 
     expect(res.status).toEqual(400);
     expect(/.+\/json/.test(res.type)).toBe(true);
-    expect(res.body.error).toBe('Query is missing an element. character: undefined, x: 70, y: 1300');
+    expect(res.body.errors[0].msg).toBe('Query is missing an element. character: undefined, x: 70, y: 1300');
   });
 
   test("Get no result if no x coord is sent", async () => {
@@ -36,7 +36,7 @@ describe("GET all results", () => {
 
     expect(res.status).toEqual(400);
     expect(/.+\/json/.test(res.type)).toBe(true);
-    expect(res.body.error).toBe('Query is missing an element. character: Ariel, x: undefined, y: 1300');
+    expect(res.body.errors[0].msg).toBe('Query is missing an element. character: Ariel, x: undefined, y: 1300');
   });
 
   test("Get no result if no y coord is sent", async () => {
@@ -44,7 +44,7 @@ describe("GET all results", () => {
 
     expect(res.status).toEqual(400);
     expect(/.+\/json/.test(res.type)).toBe(true);
-    expect(res.body.error).toBe('Query is missing an element. character: Ariel, x: 70, y: undefined');
+    expect(res.body.errors[0].msg).toBe('Query is missing an element. character: Ariel, x: 70, y: undefined');
   });
 
   // No results
