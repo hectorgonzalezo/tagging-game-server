@@ -15,6 +15,7 @@ By [Héctor González Orozco](https://github.com/hectorgonzalezo)
 
 ## :pager: API URL
 
+Hosted at: [https://wheres-waldo-server.fly.dev](https://wheres-waldo-server.fly.dev).
 
 ## :rocket: Features
 
@@ -66,7 +67,7 @@ API is thoroughly tested. Tests can be run by using:
 - Result
 ```json
 {
-  "result: true
+  "result": true
 }
 ```
 
