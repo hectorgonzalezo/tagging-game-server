@@ -40,7 +40,7 @@ const resultLookup = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
         if (lookupResult.length > 0) {
             return res.status(200).send({ result: true });
         }
-        return res.status(404).send({ result: false });
+        return res.status(200).send({ result: false });
     }
     catch (error) {
         return next(error);

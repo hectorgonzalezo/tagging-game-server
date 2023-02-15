@@ -51,7 +51,7 @@ describe("GET all results", () => {
   test("Get no result if wrong character", async () => {
     const res = await request(app).get('/results/?character=John&x=70&y=1300');
 
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(200);
     expect(/.+\/json/.test(res.type)).toBe(true);
     expect(res.body.result).toBe(false);
   });
@@ -59,7 +59,7 @@ describe("GET all results", () => {
   test("Get no result if coordinates are wrong", async () => {
     const res = await request(app).get('/results/?character=Ariel&x=40&y=100');
 
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(200);
     expect(/.+\/json/.test(res.type)).toBe(true);
     expect(res.body.result).toBe(false);
   });
@@ -67,7 +67,7 @@ describe("GET all results", () => {
   test("No match if result is 51 above for x", async () => {
     const res = await request(app).get('/results/?character=Ariel&x=121&y=1300');
 
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(200);
     expect(/.+\/json/.test(res.type)).toBe(true);
     expect(res.body.result).toBe(false);
   });
@@ -75,7 +75,7 @@ describe("GET all results", () => {
   test("No match if result is 51 below for x", async () => {
     const res = await request(app).get('/results/?character=Ariel&x=19&y=1300');
 
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(200);
     expect(/.+\/json/.test(res.type)).toBe(true);
     expect(res.body.result).toBe(false);
   });
@@ -83,7 +83,7 @@ describe("GET all results", () => {
   test("No match if result is 51 above for y", async () => {
     const res = await request(app).get('/results/?character=Ariel&x=70&y=1351');
 
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(200);
     expect(/.+\/json/.test(res.type)).toBe(true);
     expect(res.body.result).toBe(false);
   });
@@ -91,7 +91,7 @@ describe("GET all results", () => {
   test("No match if result is 51 below for y", async () => {
     const res = await request(app).get('/results/?character=Ariel&x=121&y=1249');
 
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(200);
     expect(/.+\/json/.test(res.type)).toBe(true);
     expect(res.body.result).toBe(false);
   });
