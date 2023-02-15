@@ -8,7 +8,7 @@ export const getScores = async (
   next: NextFunction,
 ) => {
   try {
-    const scores = await Score.find();
+    const scores = await Score.find().sort({ score: 1 });
     return res.status(200).send({ scores });
   } catch (error) {
     return next(error);

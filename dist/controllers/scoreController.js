@@ -17,7 +17,7 @@ const scoreModel_1 = __importDefault(require("../models/scoreModel"));
 const express_validator_1 = require("express-validator");
 const getScores = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const scores = yield scoreModel_1.default.find();
+        const scores = yield scoreModel_1.default.find().sort({ score: 1 });
         return res.status(200).send({ scores });
     }
     catch (error) {
