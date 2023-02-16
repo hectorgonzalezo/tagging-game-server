@@ -8,14 +8,15 @@ By [Héctor González Orozco](https://github.com/hectorgonzalezo)
 
 ## :computer: Built With
 
+* [TypeScript](https://www.typescriptlang.org/)
 * [NodeJS](https://nodejs.org/)
-* [MongoDB](https://www.mongodb.com/)
 * [ExpressJS](https://expressjs.com/)
+* [MongoDB](https://www.mongodb.com/)
 
 
 ## :pager: API URL
 
-Hosted at: [https://wheres-waldo-server.fly.dev](https://wheres-waldo-server.fly.dev).
+Hosted at: [https://wheres-waldo-server.fly.dev](https://wheres-waldo-server.fly.dev)
 
 ## :rocket: Features
 
